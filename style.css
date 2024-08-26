@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+    --Font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Stone-100);
+}
+
+main {
+    font-family: "Outfit", sans-serif;
+    font-size: var(--Font-size);
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 1.5rem;
+    color: var(--Stone-600);
+}
+section{
+   --bulet-color:var(--Brown-800); 
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+main img {
+    border-radius: .75rem;
+}
+
+main h1 {
+    color: var(--Stone-900);
+}
+
+main h2 {
+    color: var(--Brown-800);
+}
+
+.preparation-time {
+    --bulet-color: var(--Rose-800);
+    background-color: var(--Rose-50);
+    border-radius: .75rem;
+    padding: 1.5rem;
+}
+
+.preparation-time>.title {
+    color: var(--Rose-800);
+}
+
+ol,
+ul {
+    padding-left:1.5rem;
+}
+
+li {
+    padding: .5rem 0 0 .75rem;
+}
+
+li::marker {
+    color: var(--bulet-color);
+    font-size: small;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+section:not(section:nth-last-child(1)) {
+    border-bottom: 1px solid var(--Stone-150);
+    padding-bottom: 2rem;
+}
+td{
+   padding:.5rem 0 1rem 1.5rem; 
+}
+tr:not(tr:nth-last-child(1)) td{
+    border-bottom: 1px solid var(--Stone-150);
+}
+.value{
+color: var(--bulet-color);
+}
+@media screen and (max-width: 450px) {
+    body{
+        padding: 0;
+    }
+    main{
+        width: 100%;
+        padding: 0 0 2rem 0;
+        border-radius: 0;
+    }
+    main>:is(:not(img)){
+        padding: 0 2rem;
+    }
+    main img {
+        border-radius: 0;
+    }
+}
+@media screen and (min-width: 450px)and (max-width: 750px) {
+    main{
+        width: 70%;
+    }
+}
